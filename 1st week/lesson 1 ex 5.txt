@@ -1,0 +1,17 @@
+N = int(input())
+b = int(input())
+c = int(input())
+N10 = 0
+k = 0
+while N >= 1:
+    N10 += (N % 10) * (b ** k)
+    N //= b
+    k += 1
+stroka = ""
+while N10 >= 1:
+    stroka += str(N10 % c)
+    N10 //= c
+stroka2 = ""
+for i in range(len(stroka)):
+    stroka2 += stroka[len(stroka) - i - 1]
+print(stroka2)

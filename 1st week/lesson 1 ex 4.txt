@@ -1,0 +1,25 @@
+#f = open('text', 'w')
+#l = ['1', '2', '3', '4', '5']
+#for index in l:
+    #f.write(str(index) + '\n')
+f = open('input.txt', 'r')
+s1 = f.readline()
+numbers = list(map(int, s1.split()))
+s2 = f.readline()
+f.close()
+f = open('output.txt', 'w')
+if s2 == '+':
+    itog = 0
+    for j in numbers:
+        itog += j
+if s2 == '-':
+    itog = 0
+    for k in numbers:
+        itog -= k
+    itog += 2 * numbers[0]
+if s2 == '*':
+    itog = 1
+    for h in numbers:
+        itog *= h
+f.write(str(itog))
+f.close()
